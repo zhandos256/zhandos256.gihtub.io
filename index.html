@@ -1,87 +1,129 @@
 <!DOCTYPE html>
 <html lang="kk">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zhandos | IT-блогер</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #f3f4f6;
-      color: #111;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 40px 20px;
-    }
-    img.avatar {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      margin-bottom: 20px;
-      border: 4px solid #fff;
-      object-fit: cover;
-    }
-    h1 {
-      font-size: 24px;
-      margin-bottom: 8px;
-    }
-    p.bio {
-      font-size: 15px;
-      margin-bottom: 25px;
-      max-width: 500px;
-    }
-    .social-icons {
-      display: flex;
-      gap: 15px;
-      margin-bottom: 30px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .social-icons a {
-      background: white;
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      transition: 0.2s ease;
-      font-size: 22px;
-      text-decoration: none;
-      color: #111;
-    }
-    .social-icons a:hover {
-      transform: scale(1.1);
-      background: #e5e7eb;
-    }
-  </style>
-</head>
-<body>
-  <img src="avatar.jpg" alt="Zhandos Avatar" class="avatar" />
-  <h1>Қуанышпен! Мен Zhandos</h1>
-  <p class="bio">
-    IT-блогер, SaaS жасаушы және Telegram боттар мен Python құралдарын әзірлеуші. Мақсатым — қазақ тілінде пайдалы IT-контент тарату және Қазақстанда технологиялық білімді дамыту.
-  </p>
 
-  <div class="social-icons">
-    <a href="https://t.me/твоя_ссылка" target="_blank" title="Telegram">
-      <i class="fab fa-telegram-plane"></i>
-    </a>
-    <a href="https://www.tiktok.com/@твоя_ссылка" target="_blank" title="TikTok">
-      <i class="fab fa-tiktok"></i>
-    </a>
-    <a href="https://www.youtube.com/@твоя_ссылка" target="_blank" title="YouTube Shorts">
-      <i class="fab fa-youtube"></i>
-    </a>
-    <a href="https://www.instagram.com/твоя_ссылка" target="_blank" title="Instagram">
-      <i class="fab fa-instagram"></i>
-    </a>
-  </div>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zhandos Rakhymberlin | IT-блогер</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: #fff;
+            color: #111;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        img.avatar {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 4px solid #fff;
+            object-fit: cover;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        p.bio {
+            font-size: 15px;
+            margin-bottom: 25px;
+            max-width: 500px;
+            line-height: 1.5;
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 16px;
+            max-width: 600px;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: #f9f9f9;
+            border-radius: 12px;
+            padding: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            background: #f0f0f0;
+        }
+
+        .card a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card i {
+            font-size: 28px;
+            margin-bottom: 8px;
+            color: #111;
+        }
+
+        .card span {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="avatar.jpg" alt="Zhandos Avatar" class="avatar" />
+    <h1>Zhandos Rakhymberlin</h1>
+    <p class="bio">
+        IT-блогер, SaaS жасаушы және Telegram боттар мен Python құралдарын әзірлеуші. Мақсатым — қазақ тілінде пайдалы
+        IT-контент тарату және Қазақстанда технологиялық білімді дамыту.
+    </p>
+
+    <div class="social-grid">
+        <div class="card">
+            <a href="https://t.me/zhandos" target="_blank">
+                <i class="fab fa-telegram-plane"></i>
+                <span>Telegram</span>
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://www.tiktok.com/@zhandos" target="_blank">
+                <i class="fab fa-tiktok"></i>
+                <span>TikTok</span>
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://www.youtube.com/@zhandos" target="_blank">
+                <i class="fab fa-youtube"></i>
+                <span>YouTube</span>
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://www.instagram.com/zhandos" target="_blank">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://github.com/zhandos256" target="_blank">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+            </a>
+        </div>
+    </div>
 </body>
+
 </html>
