@@ -1,146 +1,103 @@
 <!DOCTYPE html>
 <html lang="kk">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zhandos Rakhymberlin</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
         body {
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecef 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
         }
-
-        .container {
-            background: #fff;
-            max-width: 600px;
-            width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-            padding: 30px;
-            text-align: center;
-        }
-
+        
         .avatar {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            object-fit: cover;
-            border: 3px solid #fff;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
         }
-
-        h1 {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: #222;
+        
+        .avatar:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
-
-        .bio {
-            font-size: 14px;
-            line-height: 1.5;
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        .social-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 12px;
-        }
-
+        
         .card {
-            background: #fafafa;
-            border-radius: 8px;
-            padding: 15px;
-            transition: background 0.2s ease;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
-
+        
         .card:hover {
-            background: #f0f0f0;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
-
-        .card a {
-            text-decoration: none;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .card i {
-            font-size: 20px;
-            transition: color 0.2s ease;
-        }
-
-        .card:hover .fa-envelope {
-            color: #ea4335;
-        }
-
-        /* Google Red */
-        .card:hover .fa-instagram {
-            color: #e1306c;
-        }
-
-        /* Instagram Pink */
-        .card:hover .fa-github {
-            color: #4078c0;
-        }
-
-        /* GitHub Blue */
-
-        .card span {
-            font-size: 12px;
-            font-weight: 600;
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
     </style>
 </head>
 
-<body>
-    <div class="container">
-        <img src="avatar.jpg" alt="Zhandos Avatar" class="avatar" />
-        <h1>Zhandos Rakhymberlin</h1>
-        <p class="bio">
-            IT-блогер, SaaS жасаушы, Telegram боттар мен Python құралдарын әзірлеуші. Қазақ тілінде IT-контент таратып,
-            Қазақстанда технологиялық білімді дамытамын.
-        </p>
-        <div class="social-grid">
-            <div class="card">
-                <a href="mailto:r.zhandos256@gmail.com">
-                    <i class="fas fa-envelope"></i>
-                    <span>Email</span>
+<body class="min-h-screen flex items-center justify-center p-5">
+    <div class="max-w-md w-full bg-white rounded-xl overflow-hidden shadow-xl transition-all duration-300 hover:shadow-2xl">
+        <div class="p-8 text-center">
+            <div class="flex justify-center">
+                <img src="avatar.jpg" alt="Zhandos Avatar" 
+                     class="avatar w-32 h-32 rounded-full border-4 border-white object-cover mx-auto" />
+            </div>
+            
+            <h1 class="text-3xl font-bold text-gray-800 mt-6 mb-2">
+                <span class="gradient-text">Zhandos Rakhymberlin</span>
+            </h1>
+            
+            <div class="flex justify-center space-x-2 mb-4">
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">IT-блогер</span>
+                <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-semibold rounded-full">SaaS жасаушы</span>
+                <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded-full">Python әзірлеуші</span>
+            </div>
+            
+            <p class="text-gray-600 mb-8 leading-relaxed">
+                IT-блогер, SaaS жасаушы, Telegram боттар мен Python құралдарын әзірлеуші. 
+                Қазақ тілінде IT-контент таратып, Қазақстанда технологиялық білімді дамытамын.
+            </p>
+            
+            <div class="grid grid-cols-3 gap-4">
+                <a href="mailto:r.zhandos256@gmail.com" 
+                   class="card bg-gray-50 rounded-lg p-4 hover:bg-red-50 group">
+                    <div class="flex flex-col items-center">
+                        <i class="fas fa-envelope text-2xl text-gray-600 group-hover:text-red-500 mb-2"></i>
+                        <span class="text-sm font-medium text-gray-700">Email</span>
+                    </div>
+                </a>
+                
+                <a href="https://www.instagram.com/zhandos256.dev" target="_blank" rel="noopener noreferrer"
+                   class="card bg-gray-50 rounded-lg p-4 hover:bg-pink-50 group">
+                    <div class="flex flex-col items-center">
+                        <i class="fab fa-instagram text-2xl text-gray-600 group-hover:text-pink-500 mb-2"></i>
+                        <span class="text-sm font-medium text-gray-700">Instagram</span>
+                    </div>
+                </a>
+                
+                <a href="https://github.com/zhandos256" target="_blank" rel="noopener noreferrer"
+                   class="card bg-gray-50 rounded-lg p-4 hover:bg-gray-100 group">
+                    <div class="flex flex-col items-center">
+                        <i class="fab fa-github text-2xl text-gray-600 group-hover:text-gray-800 mb-2"></i>
+                        <span class="text-sm font-medium text-gray-700">GitHub</span>
+                    </div>
                 </a>
             </div>
-            <div class="card">
-                <a href="https://www.instagram.com/zhandos256.dev" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-instagram"></i>
-                    <span>Instagram</span>
-                </a>
-            </div>
-            <div class="card">
-                <a href="https://github.com/zhandos256" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-github"></i>
-                    <span>GitHub</span>
-                </a>
+            
+            <div class="mt-8 pt-6 border-t border-gray-100">
+                <p class="text-xs text-gray-500">
+                    Қазақстандағы IT-қауымдастықты дамытуға қосыламын
+                </p>
             </div>
         </div>
     </div>
 </body>
-
 </html>
